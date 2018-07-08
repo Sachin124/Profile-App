@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Please Add This Number</h4>
+    <input type="text" id="demo">
+    <button onclick="add()">Add</button>
+    <h5 id="showOutput"></h5>
+</body>
+<script>
+    function add(){
+    var addThs = document.getElementById('demo').value;
+    // First we have to split + operator
+    var [a,b] = addThs.split('+');
+    // after spliting we store first part in a and second part is in b and parse string to interger using parseInt
+    document.getElementById('showOutput').innerHTML = parseInt(a) + parseInt(b);
+}
+</script>
+</html>

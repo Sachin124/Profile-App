@@ -1,0 +1,25 @@
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://avatars0.githubusercontent.com/u/66577?v=4');
+    background-size: cover;
+  }
+
+  .mat-card-black {
+    background: #2e3092;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.myavatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.mat-raised-button {
+  height: 34px;
+  margin: 15px 22px 11px 900px;
+}

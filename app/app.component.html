@@ -1,0 +1,61 @@
+<br>
+<div class="container-fluid">
+  <mat-card class="mat-card-black">
+    <mat-card-header>
+      <div mat-card-avatar>
+        <img class="myavatar" src="{{profileData?.avatar_url}}" alt="">&nbsp;&nbsp;</div>
+      <mat-card-title class="text-white">{{profileData?.name}}</mat-card-title>
+      <mat-card-subtitle class="text-white">{{profileData?.location}}</mat-card-subtitle>
+      <button mat-raised-button>Share</button>
+    </mat-card-header>
+  </mat-card>
+  <mat-tab-group dynamicHeight mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+
+    <mat-tab label="Following">
+      <ng-template matTabContent>
+        <mat-card>
+          <mat-grid-list cols="4" rowHeight="100">
+            <div *ngFor="let data of followingData">
+              <mat-grid-tile class="card">
+                <img class="myavatar" src="{{data.avatar_url}}" alt="">&nbsp;&nbsp; {{data.login}}
+              </mat-grid-tile>
+            </div>
+          </mat-grid-list>
+        </mat-card>
+      </ng-template>
+     
+    </mat-tab>
+
+    <mat-tab label="Followers">
+      <ng-template matTabContent>
+        <mat-card>
+          <mat-grid-list cols="4" rowHeight="100">
+            <div *ngFor="let data of followersData">
+              <mat-grid-tile class="card">
+                <img class="myavatar" src="{{data.avatar_url}}" alt=""> &nbsp;&nbsp; {{data.login}}</mat-grid-tile>
+            </div>
+          </mat-grid-list>
+        </mat-card>
+      </ng-template>
+    </mat-tab>
+
+
+    <mat-tab label="Repositories">
+      <ng-template matTabContent>
+        <div class="container">
+            <mat-list *ngFor="let data of repositoriesData">
+                <mat-list-item>
+                  <strong> {{data.name}} </strong>
+                </mat-list-item>
+                <mat-list-item>{{data.description}}</mat-list-item>
+                <mat-divider></mat-divider>
+              </mat-list>
+        </div>
+        
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+
+
+
+</div>
